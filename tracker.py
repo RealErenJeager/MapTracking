@@ -32,5 +32,5 @@ def all_locations():
 
 @app.post("/clear-locations")
 def clear_locations():
-    supabase.table("locations").delete().neq("user_id", "").execute()
+    supabase.table("locations").delete().execute()
     return {"status": "cleared"}
